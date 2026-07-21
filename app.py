@@ -135,7 +135,7 @@ defaults = {
     "average_spending": 100.00,
     "previous_fraud_history": "No",
     "card_present": "No",
-    "groq_api_key": os.getenv("GROQ_API_KEY", ""),
+    "groq_api_key": "",
     "model_name": "llama-3.3-70b-versatile"
 }
 
@@ -189,7 +189,16 @@ with st.sidebar:
     # API Configurations
     st.markdown("---")
     st.markdown("**AI Agent Configuration**")
-    st.text_input("Groq API Key", type="password", key="groq_api_key", help="Required if not set in environmental variables.")
+    
+    # Check if a server-side secret / env key is configured
+    has_server_key = bool(os.getenv("GROQ_API_KEY") or (hasattr(st, "secrets") and st.secrets.get("GROQ_API_KEY")))
+    
+    if has_server_key:
+        st.caption("🔒 **API Key Status**: Loaded securely from Server Secrets")
+        st.text_input("Override Groq API Key (Optional)", type="password", key="groq_api_key", help="Leave blank to use pre-configured server secrets.")
+    else:
+        st.text_input("Groq API Key", type="password", key="groq_api_key", help="Enter your Groq API Key (console.groq.com)")
+
     st.selectbox("LLM Model Selection", [
         "llama-3.3-70b-versatile",
         "llama-3.1-70b-versatile",
@@ -275,7 +284,8 @@ if investigate:
         os.environ["GROQ_API_KEY"] = st.session_state.groq_api_key
         
     # Check key before running
-    if not os.getenv("GROQ_API_KEY") and not st.session_state.groq_api_key:
+    has_key = bool(st.session_state.groq_api_key or os.getenv("GROQ_API_KEY") or (hasattr(st, "secrets") and st.secrets.get("GROQ_API_KEY")))
+    if not has_key:
         st.error("⚠️ Groq API Key is missing. Please paste it in the sidebar configuration to continue.")
     else:
         # Save configured model name to env for helper
