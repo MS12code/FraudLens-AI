@@ -4,16 +4,19 @@
 
 ### Agentic Credit Card Fraud Investigation Assistant
 
-[![Live Demo](https://img.shields.io/badge/Streamlit-Live_Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://fraudlens-ai-ak89vufd3rvoe94xlaapdu.streamlit.app/)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Streamlit_Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://fraudlens-ai-ak89vufd3rvoe94xlaapdu.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.59-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![LangGraph](https://img.shields.io/badge/LangGraph-1.2-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](https://langchain-ai.github.io/langgraph/)
 [![Groq](https://img.shields.io/badge/Groq-Llama_3.3-F55036?style=for-the-badge)](https://groq.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
+<br/>
+
 **FraudLens AI** is a multi-agent fraud investigation system powered by LangGraph and Groq's Llama 3.3. It simulates a professional fraud analyst desk — seven specialized AI agents collaborate sequentially to evaluate a transaction and produce an executive-ready investigation report.
 
-[🚀 Live Demo](https://fraudlens-ai-ak89vufd3rvoe94xlaapdu.streamlit.app/) · [📖 Documentation](#installation) · [🎯 Features](#features)
+<br/>
+
+👉 **[🌐 Launch Live Application](https://fraudlens-ai-ak89vufd3rvoe94xlaapdu.streamlit.app/)** 👈
 
 </div>
 
@@ -256,26 +259,7 @@ The application is deployed on Streamlit Cloud with automatic GitHub integration
 - **Case History** — SQLite persistence for previously investigated transactions
 - **Risk Trend Charts** — Visualize fraud patterns across multiple investigations
 
----
 
-## 📝 Resume Bullet Points
-
-> Copy-paste ready for your portfolio or resume:
-
-```
-FraudLens AI — Agentic Credit Card Fraud Investigation Assistant
-• Architected a 7-agent sequential fraud investigation pipeline using LangGraph StateGraph,
-  with each agent (Planner, Transaction, Customer Behavior, Location, Merchant Risk,
-  Decision, Report) passing structured Pydantic-validated outputs downstream.
-• Integrated Groq's Llama 3.3 70B via LangChain for high-speed LLM inference,
-  with robust JSON fallback parsing to ensure 100% pipeline reliability.
-• Built a premium Streamlit dashboard with a custom dark theme, live agent orchestration
-  feed, color-coded risk scoring (0–100), and auto-generated executive investigation reports.
-• Deployed on Streamlit Cloud with secret management; supports local .env, sidebar key
-  input, and cloud secrets for flexible multi-environment configuration.
-```
-
----
 
 ## 📄 License
 
