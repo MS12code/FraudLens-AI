@@ -267,6 +267,4 @@ The application is deployed on Streamlit Cloud with automatic GitHub integration
 
 Built with ❤️ using LangGraph · Groq · Streamlit
 
-⭐ Star this repo if you found it useful!
-
 </div>
