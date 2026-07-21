@@ -261,10 +261,6 @@ The application is deployed on Streamlit Cloud with automatic GitHub integration
 
 
 
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 <div align="center">
