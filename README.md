@@ -4,6 +4,7 @@
 
 ### Agentic Credit Card Fraud Investigation Assistant
 
+[![Live Demo](https://img.shields.io/badge/Streamlit-Live_Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://fraudlens-ai-ak89vufd3rvoe94xlaapdu.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.59-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![LangGraph](https://img.shields.io/badge/LangGraph-1.2-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](https://langchain-ai.github.io/langgraph/)
@@ -12,7 +13,7 @@
 
 **FraudLens AI** is a multi-agent fraud investigation system powered by LangGraph and Groq's Llama 3.3. It simulates a professional fraud analyst desk — seven specialized AI agents collaborate sequentially to evaluate a transaction and produce an executive-ready investigation report.
 
-[🚀 Live Demo](#deployment) · [📖 Documentation](#installation) · [🎯 Features](#features)
+[🚀 Live Demo](https://fraudlens-ai-ak89vufd3rvoe94xlaapdu.streamlit.app/) · [📖 Documentation](#installation) · [🎯 Features](#features)
 
 </div>
 
@@ -237,16 +238,14 @@ Watch the live agent feed as each of the 7 nodes completes, then view:
 
 ## ☁️ Deployment (Streamlit Cloud)
 
-1. Push this repo to GitHub *(already done)*
-2. Go to [share.streamlit.io](https://share.streamlit.io) → **New app**
-3. Select `MS12code/FraudLens-AI` → branch `main` → file `app.py`
-4. Click **Advanced settings** → **Secrets** and add:
+🌐 **Live App URL**: [https://fraudlens-ai-ak89vufd3rvoe94xlaapdu.streamlit.app/](https://fraudlens-ai-ak89vufd3rvoe94xlaapdu.streamlit.app/)
 
-```toml
-GROQ_API_KEY = "gsk_your_groq_api_key_here"
-```
+The application is deployed on Streamlit Cloud with automatic GitHub integration.
 
-5. Click **Deploy** — your app will be live at a `*.streamlit.app` URL!
+### Deployment Steps (Reference)
+1. Repository: `MS12code/FraudLens-AI` (branch: `main`)
+2. Entry point: `app.py`
+3. Advanced Settings → Secrets configured with `GROQ_API_KEY` and `GROQ_MODEL`.
 
 ---
 
